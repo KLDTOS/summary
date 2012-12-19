@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 /**
  * 通用结构Activity
+ * 针对事务（流程）性强的app的activity工作流程封装
  * @author Administrator
  *
  */
@@ -33,15 +34,34 @@ public abstract class GeneralStructuralActivity extends Activity {
 	}
 	
 
-
+	/**
+	 * 在此方法中处理上个页面传入的数据
+	 */
 	abstract void initIntent();
-
+	
+	/**
+	 * 初始化控件，监听方法建议使用finfviewbyid(id).setOCL(myOCL)的方法。 
+	 */
 	abstract void initControl();
 
+	/**
+	 * 初始化各个控件显示内容
+	 * 因情况，条件不同，故放在initIntent()之后，依据initIntent()中获得的数据初始化显示内容
+	 */
 	abstract void initVariable();
 	
+	/**
+	 * 初始化各种动态变化控件的各种观察者。
+	 * 状态不会改变的不需要变量名，在initControl()是进行setOCL();
+	 */
 	abstract void initObserver();
 	
+	/**
+	 * 通过jumpHandler调用，jump(msg.what)
+	 * 实现jump()后直接jumpHandler.sendMe......
+	 * 在其他类中可以先注入jumpHandler，或者通过单例缓存类得到jumpHandler
+	 * @param to
+	 */
 	abstract void jump(int to);
 	
 	
@@ -59,6 +79,9 @@ public abstract class GeneralStructuralActivity extends Activity {
 		
 	}
 	
+	/**
+	 * 预留数据恢复方法，没有实现，没有调用，需要时自行实现调用
+	 */
 	private void loadData(){
 		
 	}
