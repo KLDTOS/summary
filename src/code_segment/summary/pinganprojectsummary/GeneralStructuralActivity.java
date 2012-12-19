@@ -18,9 +18,11 @@ import android.widget.Toast;
  */
 public abstract class GeneralStructuralActivity extends Activity {
 
-	private Handler jumpHandler;//负责跳转
+	protected Handler jumpHandler;//负责跳转
 	private Toast toast;//负责显示的吐司，在此类中进行统一
-	ProgressDialog progressDialog;
+	private ProgressDialog progressDialog;
+	protected BaseDataPackage baseDataPackage;//封装数据的对象，只要做过一次银行什么的软件，对那数据操作会疯掉的，一写就是几十行的save代码，load代码~。~。。。。必须封装啊有木有~
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -143,7 +145,15 @@ public abstract class GeneralStructuralActivity extends Activity {
 		progressDialog.show();
 	}
 	
-	
+	/**
+	 * 在此类中定义基础数据类型
+	 * 在save中存储此类实例，
+	 * 依情况存选择存储方式，此处不对存储进行封装。
+	 * 注：封装存储方式导致内存及cpu消耗翻倍，故只给出推荐流程，不进行封装
+	 */
+	class BaseDataPackage{
+		
+	}
 	
 	
 }
