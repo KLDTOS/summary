@@ -53,7 +53,7 @@ public class DateDialog extends Dialog {
 		this.setContentView(date);
 	}
 	/**
-	 * 鍒濆鍖杁ate鎺т欢
+	 * 初始化时间控件
 	 */
 	private void initDateView() {
 		date=LayoutInflater.from(context).inflate(R.layout.time_control, null);

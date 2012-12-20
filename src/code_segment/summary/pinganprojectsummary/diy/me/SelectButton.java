@@ -15,13 +15,13 @@ public class SelectButton extends LinearLayout {
 
 	
 	LayoutInflater inflater;
-	private Button left;//宸︽寜閽?
-	private Button right;//鍙虫寜閽?
+	private Button left;//左按钮
+	private Button right;//右按钮
 	private Button middle;
 	private String letfSring;
 	private String rightSring;
 	private String middleString;
-	private int selected=0;//0琛ㄧず宸﹁竟閫変腑 1琛ㄧず鍙宠竟閫変腑 榛樿涓?
+	private int selected=0;//0为左按钮，1位右按钮
 	private SelectListener selectListener;
 	private boolean use=true;
 	
@@ -45,7 +45,7 @@ public class SelectButton extends LinearLayout {
 		
 	}
 	/**
-	 * 鍒濆鍖栨柟娉?
+	 * 初始化按钮
 	 * @param letfSring
 	 * @param rightSring
 	 */
@@ -57,7 +57,7 @@ public class SelectButton extends LinearLayout {
 		initText();
 	}
 	/**
-	 * 鍒濆鍖栨柟娉?
+	 * 初始化3个按钮
 	 * @param letfSring
 	 * @param middleSring
 	 * @param rightSring
@@ -71,7 +71,7 @@ public class SelectButton extends LinearLayout {
 		initText();
 	}
 	/**
-	 * 鍒濆鍖栨寜閽樉绀烘枃瀛?
+	 * 初始化文字
 	 */
 	private void initText(){
 		left.setText(letfSring);
@@ -82,7 +82,7 @@ public class SelectButton extends LinearLayout {
 		middle.setTextColor(Color.GRAY);
 	}
 	/**
-	 * 鍒濆鍖栬儗鏅?
+	 * 初始化背景图片
 	 */
 	private void initBackGround(){
 		left.setBackgroundResource(R.drawable.selectbutton_leftbg_one);
@@ -90,7 +90,7 @@ public class SelectButton extends LinearLayout {
 		middle.setBackgroundResource(R.drawable.selectbutton_middlebg_one);
 	}
 	/**
-	 * 宸︽寜閽洃鍚?
+	 * 左按钮监听
 	 * @author Administrator
 	 *
 	 */
@@ -107,7 +107,7 @@ public class SelectButton extends LinearLayout {
 		}
 	}
 	/**
-	 * 鍙虫寜閽洃鍚?
+	 * 右按钮监听
 	 * @author Administrator
 	 *
 	 */
@@ -138,7 +138,7 @@ public class SelectButton extends LinearLayout {
 		}
 	}
 	/**
-	 * 鏇存敼閫変腑鎸夐挳
+	 * 选择改变
 	 */
 	public void selectChange() {
 		try {
@@ -151,7 +151,7 @@ public class SelectButton extends LinearLayout {
 		textColorChange();
 	}
 	/**
-	 * 浜掓崲鑷綋棰滆壊
+	 * 改变字体颜色
 	 */
 	private void textColorChange() {
 		switch (selected) {
@@ -176,7 +176,7 @@ public class SelectButton extends LinearLayout {
 		
 	}
 	/**
-	 * 鎸夐挳鎹㈣儗鏅?
+	 * 改变背景图片
 	 * 
 	 */
 	public void backGroundChange(){

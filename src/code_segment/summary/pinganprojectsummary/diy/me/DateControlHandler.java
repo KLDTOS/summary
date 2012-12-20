@@ -13,10 +13,7 @@ public class DateControlHandler extends Handler {
 	public int viewId;
 
 	
-	/**
-	 * 重写此方�?
-	 * 变量�?year,month,day,viewid(均为int)
-	 */
+	
 	@Override
 	public void handleMessage(Message msg) {
 		super.handleMessage(msg);
