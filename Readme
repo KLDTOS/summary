@@ -1,1 +1,7 @@
-可复用代码总结于此（个人特殊代码库 非机密）
+可复用代码总结于此（个人代码库 非机密）
+
+SSODemo 单点集成登录lib
+
+XMLTool 工厂封装数据 xml的互转过程
+
+PingAnProjectSummart pn项目中用到的部分组件

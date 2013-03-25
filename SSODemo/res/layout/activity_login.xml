@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/login_pwd" 
+        android:layout_marginLeft="10dip"
+        android:textSize="21sp"/>
+
+    <TextView
+        
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="98dp"
+        android:text="@string/login_name" 
+        android:textSize="21sp"/>
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:ems="10" 
+        android:layout_marginRight="10dip">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:layout_marginRight="10dip"/>
+
+    <Button
+        android:id="@+id/button_loginout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_login"
+        android:layout_alignBottom="@+id/button_login"
+        android:layout_alignRight="@+id/editText_pwd"
+        android:layout_marginRight="68dp"
+        android:text="@string/login_loginout" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_pwd"
+        android:layout_marginTop="52dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="@string/login_login" />
+
+</RelativeLayout>
